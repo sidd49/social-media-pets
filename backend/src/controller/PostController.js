@@ -7,12 +7,15 @@ const fs = require('fs'); // filesystem
 module.exports = {
     async index(req, res){
         const posts = await Post.find().sort('-createdAt'); // pulls posts in descending order - new posts at the top of the feed
-        
+
         return res.json(posts)
     },
 
     async store(req, res){
         const {author, place, description, hashtags} = req.body;
+
+        console.log(req.body)
+        
         const { filename: image } = req.file;
 
         const[name] = image.split('.');
@@ -20,7 +23,7 @@ module.exports = {
 
         await sharp(req.file.path) // resizes image to 500px
             // return res.json(req.file) all informations
-             
+
             .resize(500)  // resize 500px
             .jpeg({quality: 70}) // 70% quality
             .toFile( // export to a new file

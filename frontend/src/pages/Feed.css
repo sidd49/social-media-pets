@@ -1,4 +1,9 @@
+section#post-main-section{
+  background-color: #e8bcf0;
+}
+
 section#post-list {
+
     width: 100%;
     max-width: 580px;
     margin: 0 auto;
@@ -7,8 +12,9 @@ section#post-list {
 
 section#post-list article {
     background: #FFF;
+
     border: 1px solid #DDD;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 60px;
     border-radius: 5px;
 }

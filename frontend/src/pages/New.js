@@ -78,7 +78,7 @@ class New extends Component {
                     onChange={this.handleChange}
                     value={this.state.hashtags}
                 />
-                
+
                 <button type="submit">Submit</button>
             </form>
         );

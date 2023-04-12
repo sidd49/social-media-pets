@@ -12,7 +12,7 @@ export default function Header() {
     <header id="main-header">
         <div className="header-content">
             <Link to="/">
-                <img src={logo} alt="InstaRocket"/>
+                <img width="72px" src={logo} alt="PetaGram"/>
             </Link>
 
             <Link to="/new">
